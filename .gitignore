@@ -1,0 +1,17 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+# Thumbnails
+._*
+
+## VisualStudioCode ###
+.vscode
+
+## Development stuff ##
+/node_modules
+/dist
+/coverage

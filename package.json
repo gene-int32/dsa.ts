@@ -1,0 +1,61 @@
+{
+    "name": "dsa.ts",
+    "version": "0.0.1",
+    "description": "Data Structures and Algorithms in TypeScript",
+    "main": "dist/index.js",
+    "module": "",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "prebuild": "npm run clear",
+        "build": "tsc",
+        "test": "jest",
+        "test:watch": "jest --watchAll --coverage --coverageReporters=text",
+        "test:coverage": "jest --coverage",
+        "lint": "eslint src/**",
+        "lint:fix": "npm run lint -- --fix",
+        "preversion": "npm run lint:fix",
+        "postversion": "git push --tags",
+        "clear": "rimraf dist coverage"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts": "npm run lint:fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gene-int32/dsa.ts.git"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gene-int32/dsa.ts/issues"
+    },
+    "homepage": "https://github.com/gene-int32/dsa.ts#readme",
+    "devDependencies": {
+        "@types/jest": "^25.1.3",
+        "@typescript-eslint/eslint-plugin": "^2.20.0",
+        "@typescript-eslint/parser": "^2.20.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.3",
+        "jest": "^25.1.0",
+        "lint-staged": "^10.0.8",
+        "prettier": "^1.19.1",
+        "rimraf": "^3.0.2",
+        "ts-jest": "^25.2.1",
+        "typescript": "^3.7.5"
+    },
+    "keywords": [
+        "data structures",
+        "algorithms",
+        "typescript"
+    ],
+    "author": "Eugene Kravchuk"
+}
