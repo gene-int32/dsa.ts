@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+node_js:
+  - node
+cache:
+  directories:
+    - node_modules
+scripts:
+  - npm run lint
+  - npm run test:coveralls
+branches:
+  only:
+    - master
+notification:
+  mail: false
